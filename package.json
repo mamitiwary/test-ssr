@@ -17,8 +17,8 @@
     "dev:start": "nodemon ./server-build/index.js",
     "dev": "npm-run-all --parallel build dev:*",
     "start": "react-scripts start",
-    "buildw": "webpack --mode production",
-    "build": "webpack --config webpack.server.js --mode=production",
+    "buildw": "react-scripts build",
+    "build": "react-scripts build && webpack --config webpack.server.js --mode=production",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
