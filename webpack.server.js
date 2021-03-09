@@ -1,5 +1,6 @@
 const path = require('path');
 const nodeExternals = require('webpack-node-externals');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: './server/index.js',
@@ -12,7 +13,14 @@ module.exports = {
     path: path.resolve('server-build'),
     filename: 'index.js'
   },
-
+  plugins: [
+    new HtmlWebpackPlugin(
+        {
+          inject: true,
+          template: path.resolve('./public/index.html'),
+        }
+    )
+  ],
   module: {
     rules: [
       {
