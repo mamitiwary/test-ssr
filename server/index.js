@@ -13,7 +13,7 @@ app.get('/', (req, res) => {
   console.log("start / path")
     const app = ReactDOMServer.renderToString(<App />);
   
-    const indexFile = path.resolve('./public/index.html');
+    const indexFile = path.resolve('../public/index.html');
     fs.readFile(indexFile, 'utf8', (err, data) => {
       console.log("load / path")
       if (err) {
@@ -32,7 +32,7 @@ app.get('/', (req, res) => {
   });
   
   
-  app.use(express.static('./public'));
+  app.use(express.static('../public'));
   
   app.listen(PORT, () => {
     console.log(`Server is listening on port ${PORT}`);
