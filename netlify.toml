@@ -3,5 +3,5 @@
   Publish = "build"
 [[redirects]]
   from = "/*"
-  to = "../.netlify/functions/hey"
+  to = "/.netlify/functions/hey"
   status = 200
