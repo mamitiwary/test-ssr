@@ -10,7 +10,7 @@ app.get('/', (req, res) => {
   console.log("start / path")  
     const indexFile = path.resolve('../build/index.html');
     fs.readFile(indexFile, 'utf8', (err, data) => {
-      console.log("load / path")
+      console.log("load / path "+data)
       if (err) {
         console.error('Something went wrong:', err);
         return res.status(500).send('Oops, better luck next time!');
