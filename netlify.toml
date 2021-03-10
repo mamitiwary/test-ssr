@@ -1,0 +1,7 @@
+[build]
+  Functions = "functions"
+  Publish = "build"
+[[redirects]]
+  from = "/*"
+  to = "../.netlify/functions/hey"
+  status = 200
