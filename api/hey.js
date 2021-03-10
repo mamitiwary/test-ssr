@@ -15,6 +15,7 @@ app.get('/', (req, res) => {
         return res.status(500).send('Oops, better luck next time!');
       }
       data = data.replace(/\$OG_TITLE/g, 'Superpro.ai');
+      data = data.replace(/\$TITLE/g, 'Superpro.ai');
       return res.send(data);
     });
   });
