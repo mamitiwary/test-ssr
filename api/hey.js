@@ -2,6 +2,7 @@ import path from 'path';
 import fs from 'fs';
 
 import express from 'express';
+import serverless from "serverless-http"
 
 const PORT = process.env.PORT || 3006;
 const app = express();
@@ -30,3 +31,4 @@ app.get('/', (req, res) => {
   app.listen(PORT, () => {
     console.log(`Server is listening on port ${PORT}`);
   });
+  exports.handler = serverless(app)
